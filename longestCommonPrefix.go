@@ -17,6 +17,7 @@ func longestCommonPrefix(strs []string) string {
 		prefix = lcp(prefix, strs[i])
 		fmt.Printf("prefix:%v\n",prefix)
 		fmt.Printf("index:%v\n",i)
+		fmt.Printf("********************\n")
 		if len(prefix) == 0 {
 			fmt.Printf("len(prefix):%v\n",len(prefix))
 			break

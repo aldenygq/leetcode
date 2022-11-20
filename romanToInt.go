@@ -29,6 +29,6 @@ func romanToInt(s string) (ans int) {
 }
 
 func main() {
-	s := "MCMXCIV"
+	s := "III"
 	fmt.Printf("num:%v\n",romanToInt(s))
 }

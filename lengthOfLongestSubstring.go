@@ -30,7 +30,7 @@ func lengthOfLongestSubstring(s string) int {
 		fmt.Printf("index end:%v\n",i)
 		fmt.Printf("rk end:%v\n",rk)
 		fmt.Printf("ans end:%v\n",ans)
-		fmt.Printf("====================")
+		fmt.Printf("====================\n")
 	}
 	return ans
 }

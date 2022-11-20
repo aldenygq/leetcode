@@ -56,6 +56,12 @@ func addTwoNumbers(l1, l2 *ListNode) (head *ListNode) {
 		}
 		sum := n1 + n2 + carry
 		sum, carry = sum%10, sum/10
+		fmt.Printf("n1:%v\n",n1)
+		fmt.Printf("n2:%v\n",n2)
+		fmt.Printf("sum:%v\n",sum)
+		fmt.Printf("carry:%v\n",carry)
+		h,_ := json.Marshal(head)
+		fmt.Printf("head:%v\n",string(h))
 		if head == nil {
 			head = &ListNode{Val: sum}
 			tail = head
@@ -63,6 +69,9 @@ func addTwoNumbers(l1, l2 *ListNode) (head *ListNode) {
 			tail.Next = &ListNode{Val: sum}
 			tail = tail.Next
 		}
+		t,_ := json.Marshal(tail)
+		fmt.Printf("tail:%v\n",string(t))
+		fmt.Printf("*************************\n")
 	}
 	if carry > 0 {
 		tail.Next = &ListNode{Val: carry}
@@ -102,7 +111,7 @@ func main() {
 	
 	i2,_ := json.Marshal(head1)
 	fmt.Printf("i2:%v\n",string(i2))
-	
+	fmt.Printf("---------------------------\n")
 	a := addTwoNumbers(head,head1)
 	ap,_ := json.Marshal(a)
 	fmt.Printf("a:%v\n",string(ap))
